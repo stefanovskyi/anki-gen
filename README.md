@@ -54,6 +54,12 @@ The application will generate flashcards based on the default prompt and create 
 - **Flashcard Generation:** `genanki`
 - **Data Handling:** JSON for structuring generated content
 - **Package Management:** `pip` for dependencies
+- **API Framework:** FastAPI
+- **Containerization:** Docker
+
+### API Endpoints
+- POST `/generate-flashcards`: Generate new flashcards
+- GET `/download/{filename}`: Download generated Anki deck
 
 ## **Expected Input and Output**
 ### **Input**
