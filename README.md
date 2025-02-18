@@ -3,6 +3,51 @@
 ## **Project Goal**
 This project aims to create an AI-powered application that generates Anki flashcards to help Ukrainians learn Polish efficiently. The system will take a user prompt as input, generate Polish vocabulary words grouped by themes, and enrich them with essential details like phonetic transcription, part of speech, translation, example sentences, etymology, and mnemonic aids. The output will be a `.apkg` file compatible with Anki for spaced repetition learning.
 
+## **Installation and Running**
+
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
+- OpenAI API key
+
+### Setup
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/polish-flashcards-generator.git
+cd polish-flashcards-generator
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Set up environment variables:
+```bash
+cp .env.example .env
+```
+Edit `.env` file and add your OpenAI API key.
+
+### Running the Application
+1. Activate the virtual environment (if not already activated):
+```bash
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+2. Run the application:
+```bash
+python src/main.py
+```
+
+The application will generate flashcards based on the default prompt and create an Anki deck file (`.apkg`) in the project directory.
+
 ## **Technology Stack**
 - **Programming Language:** Python
 - **AI Model:** OpenAI API (GPT-4 via LangChain)

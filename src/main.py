@@ -5,13 +5,10 @@ from models.flashcard import Flashcard
 from config.settings import Settings
 
 def main():
-    # Initialize settings
     settings = Settings()
     
-    # Create flashcard generator
     generator = FlashcardGenerator()
     
-    # Example prompt
     prompt = {
         "num_words": 10,
         "categories": ["Transport", "Food", "Technology"],
@@ -19,10 +16,8 @@ def main():
         "native_language": "Ukrainian"
     }
     
-    # Generate flashcards
     flashcards = generator.generate(prompt)
     
-    # Export to Anki deck
     exporter = AnkiExporter()
     deck_path = exporter.export_to_apkg(flashcards)
     

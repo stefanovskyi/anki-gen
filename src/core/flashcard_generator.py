@@ -8,13 +8,8 @@ class FlashcardGenerator:
         self.openai_client = OpenAIClient()
     
     def generate(self, prompt: Dict) -> List[Flashcard]:
-        # Format the prompt using template
         formatted_prompt = FLASHCARD_GENERATION_PROMPT.format(**prompt)
-        
-        # Get response from OpenAI
         response = self.openai_client.generate_flashcards(formatted_prompt)
-        
-        # Parse response into Flashcard objects
         flashcards = self._parse_response(response)
         
         return flashcards
