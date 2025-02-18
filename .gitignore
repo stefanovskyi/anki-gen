@@ -31,4 +31,10 @@ var/
 
 # Project specific
 *.apkg
-examples/sample_outputs/* 
+examples/sample_outputs/*
+
+# Cursor specific
+.cursor/
+.cursor.json
+cursor.json
+.workspace/ 
